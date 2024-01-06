@@ -63,4 +63,11 @@ function getTotalX($a, $b) {
     return $count;
 }
 
-echo getTotalX([51], [50]);
+// expected result = 0
+// echo getTotalX([51], [50]);
+
+// expected result = 3
+// echo getTotalX([2,4], [16,32,96]);
+
+// expected result = 9
+// echo getTotalX([1], [100]);
