@@ -9,19 +9,17 @@
 
 function breakingRecords($scores) {
     // Write your code here
-    $min = 0;
-    $max = 0;
+    $min = $max = $scores[0];
     $n = count( $scores );
     $breaking_points = array(0,0);
     for( $i = 0; $i < $n; $i++ ) {
-        if( $i === 0 ) {
-            $min = $max = $scores[$i];
-        }
-        if( $scores[$i] > $min && $scores[$i] > $max ) {
+        // if( $i === 0 ) {
+        //     $min = $max = $scores[$i];
+        // }
+        if( $scores[$i] > $max ) {
             $max = $scores[$i];
             $breaking_points[0]++;
-        }
-        if ( $scores[$i] < $min ) {
+        }elseif ( $scores[$i] < $min ) {
             $min = $scores[$i];
             $breaking_points[1]++;
         }
